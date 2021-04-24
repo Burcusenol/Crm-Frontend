@@ -11,10 +11,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import {ToastrModule} from "ngx-toastr";
+import { HeadingComponent } from './heading/heading.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeadingComponent
   ],
   imports: [
     BrowserModule,
