@@ -11,12 +11,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import {ToastrModule} from "ngx-toastr";
-import { HeadingComponent } from './heading/heading.component';
+import { HeadingComponent } from './components/heading/heading.component';
+import { NaviComponent } from './components/navi/navi.component';
+import { UpdateComponent } from './components/update/update.component';
+import { IdentityComponent } from './components/identity/identity.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeadingComponent
+    HeadingComponent,
+    NaviComponent,
+    UpdateComponent,
+    IdentityComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +34,8 @@ import { HeadingComponent } from './heading/heading.component';
     ReactiveFormsModule,
     ToastrModule.forRoot({
       positionClass:"toast-bottom-right"
-    })
+    }),
+    NgbModule
   ],
   providers: [] ,
   bootstrap: [AppComponent]
