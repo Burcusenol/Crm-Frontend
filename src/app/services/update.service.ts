@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UpdateService {
-  apiUrl="https://localhost:44300/api/personupdates"
+  apiUrl="https://localhost:44390/api/personupdates"
 
   constructor() { }
 }
