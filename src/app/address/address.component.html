@@ -1,40 +1,39 @@
-
-  <div class="content">
+<div class="content">
     <div class="col-md-12">
       <div class="card">
-          <form [formGroup]="identityAddForm">
+          <form [formGroup]="addressAddForm">
             <div class="card-body">
             <div class="mb-2 row">
               <div class="col-md-2">
-                <label for="birthPlace" class="col-form-label">Doğum Yeri</label>
+                <label for="recipientName" class="col-form-label">Alıcı Adı</label>
               </div>
               <div class="col-sm-4">
-                <input type="text" id="birthPlace" class="form-control"formControlName="birthPlace" placeholder="ANTALYA">
+                <input type="text" id="recipientName" class="form-control"formControlName="recipientName" placeholder="Ekrem H. Deniz">
               </div>
               <div class="col-md-2">
-                <label for="place" class="col-form-label">Yerleşim ülkesi</label>
+                <label for="neighborhood" class="col-form-label">Mahalle</label>
               </div>
               <div class="col-sm-4">
-                <select class="form-select" id="place" formControlName="place" aria-label="Türkiye">
-                  <option selected value="">Türkiye</option>
+                <select class="form-select" id="neighborhood" formControlName="neighborhood" aria-label="">
+                  <option selected >Türkiye</option>
                   <option value="1">One</option>
                 </select>
               </div>
             </div>
             <div class="mb-2 row">
               <div class="col-md-2">
-                <label for="fatherName" class="col-form-label">Baba Adı</label>
+                <label for="addressType" class="col-form-label">Adres Tipi</label>
               </div>
               <div class="col-sm-4">
-                <input type="text" id="fatherName" class="form-control"formControlName="fatherName" placeholder="Kerem">
+                <select class="form-select" id="addressType" formControlName="addressType" aria-label="">
+                    <option selected ></option>
+                  </select>
               </div>
               <div class="col-md-2">
-                <label for="nationality" class="col-form-label">Uyruk</label>
+                <label for="street" class="col-form-label">Cadde</label>
               </div>
               <div class="col-sm-4">
-                <select class="form-select" id="nationality" formControlName="nationality" aria-label="Türkiye">
-                  <option selected value="">Türkiye</option>
-                </select>
+                <input type="text" id="street" class="form-control"formControlName="street" placeholder="">
               </div>
              </div>
              <div class="mb-2 row">

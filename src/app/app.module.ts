@@ -16,6 +16,7 @@ import { NaviComponent } from './components/navi/navi.component';
 import { UpdateComponent } from './components/update/update.component';
 import { IdentityComponent } from './components/identity/identity.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AddressComponent } from './address/address.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HeadingComponent,
     NaviComponent,
     UpdateComponent,
-    IdentityComponent
+    IdentityComponent,
+    AddressComponent
   ],
   imports: [
     BrowserModule,

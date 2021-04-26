@@ -9,13 +9,13 @@ import { IdentityService } from 'src/app/services/identity.service';
   styleUrls: ['./identity.component.css']
 })
 export class IdentityComponent implements OnInit {
-identityAddForm:FormGroup;
+  identityAddForm:FormGroup;
   constructor(private formBuilder:FormBuilder,
     private identityService:IdentityService,
     private toastrService:ToastrService) { }
 
   ngOnInit(): void {
-
+    this.createIdentityAddForm();
   }
 
   createIdentityAddForm(){
@@ -29,22 +29,25 @@ identityAddForm:FormGroup;
     });
   }
 
-  add(){
-    if(this.identityAddForm.valid){
-      let identityModel=Object.assign({},this.identityAddForm.value);
-      this.identityService.add(identityModel).subscribe(response=>{
-        this.toastrService.success(response.message,"Başarılı.")
-      },
-      responseError=>{
+  add() {
+    if (this.identityAddForm.valid) {
+      let identityModel = Object.assign({}, this.identityAddForm.value);
+      this.identityService.add(identityModel).subscribe(response=>{ 
+        this.toastrService.success(response.message,"Başarılı")
+      },responseError=>{
         if(responseError.error.ValidationErrors.length>0){
-          for(let i=0;i<responseError.error.ValidationErrors.length;i++){
-            this.toastrService.error(responseError.error.ValidationErrors[i].ErrorMessage,"Doğrulama hatası");
+          for (let i = 0; i < responseError.error.ValidationErrors.length; i++) {
+             this.toastrService.error(responseError.error.ValidationErrors[i].ErrorMessage,"Doğrulama hatası");
           }
+         
         }
-      })
-    }else{
-      this.toastrService.error("Formunuz eksik","Dikkat");
-    }
-  }
 
+      });
+     
+    } else {
+      this.toastrService.error('Formunuz eksik', 'Dikkat');
+    }
+
+  }
 }
+
