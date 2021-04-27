@@ -4,9 +4,6 @@ import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import {FormsModule,ReactiveFormsModule} from '@angular/forms'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
-
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -16,7 +13,9 @@ import { NaviComponent } from './components/navi/navi.component';
 import { UpdateComponent } from './components/update/update.component';
 import { IdentityComponent } from './components/identity/identity.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AddressComponent } from './address/address.component';
+import { AddressComponent } from './components/address/address.component';
+import {ContactComponent} from './components/contact/contact.component';
+import { JobComponent } from './components/job/job.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,10 @@ import { AddressComponent } from './address/address.component';
     NaviComponent,
     UpdateComponent,
     IdentityComponent,
-    AddressComponent
+    AddressComponent,
+    ContactComponent,
+    JobComponent
+    
   ],
   imports: [
     BrowserModule,

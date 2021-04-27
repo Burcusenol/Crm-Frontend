@@ -1,17 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Job } from '../models/job';
 import { ResponseModel } from '../models/responseModel';
-import { PersonUpdate } from '../models/update';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UpdateService {
-  apiUrl="https://localhost:44390/api/"
-
+export class JobService {
+  apiUrl="https://localhost:44390/api/";
   constructor(private httpClient:HttpClient) { }
-  add(personupdate:PersonUpdate):Observable<ResponseModel>{
-    return this.httpClient.post<ResponseModel>(this.apiUrl+"personupdate/add",personupdate)
+
+  add(job:Job):Observable<ResponseModel>{
+    return this.httpClient.post<ResponseModel>(this.apiUrl+"jobs/add",job)
   }
 }

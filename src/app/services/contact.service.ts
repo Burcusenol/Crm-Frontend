@@ -1,17 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Contact } from '../models/contact';
 import { ResponseModel } from '../models/responseModel';
-import { PersonUpdate } from '../models/update';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UpdateService {
+export class ContactService {
   apiUrl="https://localhost:44390/api/"
 
   constructor(private httpClient:HttpClient) { }
-  add(personupdate:PersonUpdate):Observable<ResponseModel>{
-    return this.httpClient.post<ResponseModel>(this.apiUrl+"personupdate/add",personupdate)
+
+  add(contact:Contact):Observable<ResponseModel>{
+    return this.httpClient.post<ResponseModel>(this.apiUrl+"contacts/add",contact)
   }
 }

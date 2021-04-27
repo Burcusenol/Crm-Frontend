@@ -1,0 +1,168 @@
+<div class="content">
+  <div class="col-md-12">
+    <div class="card">
+      <form [formGroup]="addressAddForm">
+        <div class="card-body">
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="recipientName" class="col-form-label"
+                >Alıcı Adı</label
+              >
+            </div>
+            <div class="col-sm-4">
+              <input
+                type="text"
+                id="recipientName"
+                class="form-control"
+                formControlName="recipientName"
+                placeholder="Ekrem H. Deniz"
+              />
+            </div>
+            <div class="col-md-2">
+              <label for="neighborhood" class="col-form-label">Mahalle</label>
+            </div>
+            <div class="col-sm-4">
+              <select
+                class="form-select"
+                id="neighborhood"
+                formControlName="neighborhood"
+                aria-label=""
+              >
+                <option selected>Türkiye</option>
+                <option value="1">One</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="addressType" class="col-form-label">Adres Tipi</label>
+            </div>
+            <div class="col-sm-4">
+              <select
+                class="form-select"
+                id="addressType"
+                formControlName="addressType"
+                aria-label=""
+              >
+                <option selected></option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="street" class="col-form-label">Cadde</label>
+            </div>
+            <div class="col-sm-4">
+              <input
+                type="text"
+                id="street"
+                class="form-control"
+                formControlName="street"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="country" class="col-form-label">Ülke</label>
+            </div>
+            <div class="col-sm-4">
+              <select
+                class="form-select"
+                id="country"
+                formControlName="country"
+                aria-label=""
+              >
+                <option selected></option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="street1" class="col-form-label">Sokak</label>
+            </div>
+            <div class="col-sm-4">
+              <input
+                type="text"
+                id="street1"
+                class="form-control"
+                formControlName="street1"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="city" class="col-form-label">İl</label>
+            </div>
+            <div class="col-sm-4">
+              <select
+                class="form-select"
+                id="city"
+                formControlName="city"
+                aria-label=""
+              >
+                <option selected></option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="apartment" class="col-form-label">Bina Adı</label>
+            </div>
+            <div class="col-sm-4">
+              <input
+                type="text"
+                id="apartment"
+                class="form-control"
+                formControlName="apartment"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="district" class="col-form-label">İlçe</label>
+            </div>
+            <div class="col-sm-4">
+              <select
+                class="form-select"
+                id="district"
+                formControlName="district"
+                aria-label=""
+              >
+                <option selected></option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="apartmentNo" class="col-form-label">Bina No</label>
+            </div>
+            <div class="col-sm-4">
+              <input
+                type="text"
+                id="apartmentNo"
+                class="form-control"
+                formControlName="apartmentNo"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="postalCode" class="col-form-label">Posta Kodu</label>
+            </div>
+            <div class="col-sm-4">
+                <input
+                type="number"
+                id="postalCode"
+                class="form-control"
+                formControlName="postalCode"
+                placeholder=""
+              />
+            </div>
+            
+          </div>
+        </div>
+        <div class="card-body">
+          <button class="btn btn-outline-primary" (click)="add()">
+            Kaydet
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

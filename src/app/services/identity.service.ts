@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Identity } from '../models/identity';
 import { ResponseModel } from '../models/responseModel';
 
@@ -11,7 +12,7 @@ export class IdentityService {
 
   constructor(private httpClient:HttpClient) { }
 
-  add(identity:Identity){
+  add(identity:Identity):Observable<ResponseModel>{
     return this.httpClient.post<ResponseModel>(this.apiUrl+"identities/add",identity)
   }
 }

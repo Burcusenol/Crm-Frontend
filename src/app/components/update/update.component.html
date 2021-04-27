@@ -1,1 +1,320 @@
-<p>update works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-light" aria-label="Tenth navbar example">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse " id="navbarsExample08">
+        <ul class="nav nav-tabs">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="genel-tab" data-bs-toggle="tab" data-bs-target="#genel" type="button" role="tab" aria-controls="genel" aria-selected="true">Genel Bilgiler</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="kimlik-tab" data-bs-toggle="tab" data-bs-target="#kimlik" type="button" role="tab" aria-controls="kimlik" aria-selected="false">Kimlik</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="iletisim-tab" data-bs-toggle="tab" data-bs-target="#iletisim" type="button" role="tab" aria-controls="iletisim" aria-selected="false">İletişim</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="egitim-tab" data-bs-toggle="tab" data-bs-target="#egitim" type="button" role="tab" aria-controls="egitim" aria-selected="false">Eğitim</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="referans-tab" data-bs-toggle="tab" data-bs-target="#referans" type="button" role="tab" aria-controls="referans" aria-selected="false">Referanslar</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="iliski-tab" data-bs-toggle="tab" data-bs-target="#iliski" type="button" role="tab" aria-controls="iliski" aria-selected="false">İlişkiler</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="meslek-tab" data-bs-toggle="tab" data-bs-target="#meslek" type="button" role="tab" aria-controls="meslek" aria-selected="false">Mesleki-Mali</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="genel" role="tabpanel" aria-labelledby="genel-tab">
+        <div class="content">
+            <div class="col-md-12">
+              <div class="card">
+                <form [formGroup]="updateAddForm">
+                  <div class="card-body">
+                    <div class="mb-2 row">
+                      <div class="col-md-2">
+                        <label for="id" class="col-form-label"
+                          >Muhatap Numarası</label
+                        >
+                      </div>
+                      <div class="col-sm-4">
+                        <input
+                          type="text"
+                          id="id"
+                          class="form-control"
+                          formControlName="id"
+                          placeholder="987123"
+                        />
+                      </div>
+                      <div class="col-md-2">
+                        <label for="segment" class="col-form-label">Segment</label>
+                      </div>
+                      <div class="col-sm-4">
+                        <select
+                          class="form-select"
+                          id="segment"
+                          formControlName="segment"
+                          aria-label="Yeni Bireysel"
+                        >
+                          <option selected>Yeni Bireysel</option>
+                          <option value="1">Yeni Kurumsal</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <div class="col-md-2">
+                        <label for="personType" class="col-form-label">Muhatap Türü</label>
+                      </div>
+                      <div class="col-sm-4">
+                        <select
+                          class="form-select"
+                          id="personType"
+                          formControlName="personType"
+                          aria-label=""
+                          aria-placeholder="Potansiyel Müşteri"
+                        >
+                          <option selected></option>
+                        </select>
+                      </div>
+                      <div class="col-md-2">
+                        <label for="actionSegment" class="col-form-label">Davranış Segmenti</label>
+                      </div>
+                      <div class="col-sm-4">
+                        <input
+                          type="text"
+                          id="actionSegment"
+                          class="form-control"
+                          formControlName="actionSegment"
+                          placeholder=""
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <div class="col-md-2">
+                        <label for="kvkStatus" class="col-form-label">KVK Durumu</label>
+                      </div>
+                      <div class="col-sm-4">
+                        <select
+                          class="form-select"
+                          id="kvkStatus"
+                          formControlName="kvkStatus"
+                          aria-label=""
+                          aria-placeholder="Açık rıza"
+                        >
+                          <option selected></option>
+                        </select>
+                      </div>
+                      <div class="col-md-2">
+                        <label for="portfolio" class="col-form-label">Portföy</label>
+                      </div>
+                      <div class="col-sm-4">
+                        <select
+                          class="form-select"
+                          id="portfolio"
+                          formControlName="portfolio"
+                          aria-label="Merkez Şube Bireysel"
+                          aria-placeholder=""
+                        >
+                          <option selected></option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <div class="col-md-2">
+                        <label for="personName" class="col-form-label">Muhatap Adı</label>
+                      </div>
+                      <div class="col-sm-4">
+                        <input
+                          type="text"
+                          id="personName"
+                          class="form-control"
+                          formControlName="personName"
+                          placeholder=""
+                        />
+                      </div>
+                      <div class="col-md-2">
+                        <label for="riskClass" class="col-form-label">Risk Sınıfı</label>
+                      </div>
+                      <div class="col-sm-4">
+                        <input
+                          type="text"
+                          id="riskClass"
+                          class="form-control"
+                          formControlName="riskClass"
+                          placeholder=""
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <div class="col-md-2">
+                        <label for="district" class="col-form-label">Muhatap Durumu</label>
+                      </div>
+                      <div class="col-sm-4">
+                        <select
+                          class="form-select"
+                          id="district"
+                          formControlName="district"
+                          aria-label=""
+                        >
+                          <option selected></option>
+                        </select>
+                      </div>
+                      <div class="col-md-2">
+                        <label for="apartmentNo" class="col-form-label">Bina No</label>
+                      </div>
+                      <div class="col-sm-4">
+                        <input
+                          type="text"
+                          id="apartmentNo"
+                          class="form-control"
+                          formControlName="apartmentNo"
+                          placeholder=""
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <div class="col-md-2">
+                        <label for="postalCode" class="col-form-label">Posta Kodu</label>
+                      </div>
+                      <div class="col-sm-4">
+                          <input
+                          type="number"
+                          id="postalCode"
+                          class="form-control"
+                          formControlName="postalCode"
+                          placeholder=""
+                        />
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <button class="btn btn-outline-primary" (click)="add()">
+                      Kaydet
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="tab-pane fade" id="kimlik" role="tabpanel" aria-labelledby="kimlik-tab">BBB.</div>
+  <div class="tab-pane fade" id="iletisim" role="tabpanel" aria-labelledby="iletisim-tab">CCC..</div>
+  <div class="tab-pane fade " id="egitim" role="tabpanel" aria-labelledby="egitim-tab">DDD</div>
+  <div class="tab-pane fade" id="referans" role="tabpanel" aria-labelledby="referans-tab">EEE.</div>
+  <div class="tab-pane fade" id="iliski" role="tabpanel" aria-labelledby="iliski-tab">FFF</div>
+  <div class="tab-pane fade " id="meslek" role="tabpanel" aria-labelledby="meslek-tab">GGG</div>
+  
+    
+  </div>
