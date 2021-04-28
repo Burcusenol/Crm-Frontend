@@ -1,0 +1,212 @@
+<nav
+  class="navbar navbar-expand-lg navbar-dark bg-light"
+  aria-label="Tenth navbar example"
+>
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarsExample08"
+      aria-controls="navbarsExample08"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample08">
+      <ul class="nav nav-tabs">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="jobtype-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#jobtype"
+            type="button"
+            role="tab"
+            aria-controls="jobtype"
+            aria-selected="true"
+          >
+            Çalışma Hayatı
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="home-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#home"
+            type="button"
+            role="tab"
+            aria-controls="home"
+            aria-selected="false"
+          >
+            Hane/Hane Halkı
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="tab-content" id="myTabContent">
+  <div
+    class="tab-pane fade show active"
+    id="jobtype"
+    role="tabpanel"
+    aria-labelledby="jobtype-tab"
+  >
+    <div class="content">
+      <div class="col-md-12">
+        <div class="card">
+          <form [formGroup]="jobtypeAddForm">
+            <div class="card-body">
+              <div class="mb-2 row">
+                <div class="col-md-2">
+                  <label for="jobTypes" class="col-form-label"
+                    >Çalışma Tipi</label
+                  >
+                </div>
+                <div class="col-sm-4">
+                  <select
+                    class="form-select"
+                    id="jobTypes"
+                    formControlName="jobTypes"
+                    aria-label=""
+                  >
+                    <option selected></option>
+                    <option value="1"></option>
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <label for="activityField" class="col-form-label"
+                    >Faaliyet Alanı</label
+                  >
+                </div>
+                <div class="col-sm-4">
+                  <select
+                    class="form-select"
+                    id="activityField"
+                    formControlName="activityField"
+                    aria-label=" "
+                  >
+                    <option selected></option>
+                    <option value="1"></option>
+                  </select>
+                </div>
+              </div>
+              <div class="mb-2 row">
+                <div class="col-md-2">
+                  <label for="companyName" class="col-form-label"
+                    >Çalıştığı iş Yeri</label
+                  >
+                </div>
+                <div class="col-sm-4">
+                  <input
+                    type="text"
+                    id="companyName"
+                    class="form-control"
+                    formControlName="companyName"
+                    placeholder=""
+                  />
+                </div>
+                <div class="col-md-2">
+                  <label for="companyAddress" class="col-form-label">
+                    İş Yeri Adresi</label
+                  >
+                </div>
+                <div class="col-sm-4">
+                  <input
+                    type="text"
+                    id="companyAddress"
+                    class="form-control"
+                    formControlName="companyAddress"
+                    placeholder=""
+                  />
+                </div>
+              </div>
+              <div class="mb-2 row">
+                <div class="col-md-2">
+                  <label for="title" class="col-form-label"> Ünvan</label>
+                </div>
+                <div class="col-sm-4">
+                  <select
+                    class="form-select"
+                    id="title"
+                    formControlName="title"
+                    aria-label=""
+                    aria-placeholder=""
+                  >
+                    <option selected></option>
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <label for="jobDate" class="col-form-label"
+                    >İşe Başlama Tarihi</label
+                  >
+                </div>
+                <div class="col-sm-4">
+                  <input
+                    type="date"
+                    id="jobDate"
+                    class="form-control"
+                    formControlName="jobDate"
+                    placeholder=""
+                  />
+                </div>
+              </div>
+              <div class="mb-2 row">
+                <div class="col-md-2">
+                  <label for="ssk" class="col-form-label"
+                    >Sosyal Güv. Kurumu</label
+                  >
+                </div>
+                <div class="col-sm-4">
+                  <select
+                    class="form-select"
+                    id="ssk"
+                    formControlName="ssk"
+                    aria-label=""
+                    aria-placeholder=""
+                  >
+                    <option selected></option>
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <label for="sskNo" class="col-form-label"
+                    >Sosyal Güvenli No Sınıfı</label
+                  >
+                </div>
+                <div class="col-sm-4">
+                  <select
+                    class="form-select"
+                    id="sskNo"
+                    formControlName="sskNo"
+                    aria-label=""
+                  >
+                    <option selected></option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <button class="btn btn-outline-primary" (click)="add()">
+                Kaydet
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="tab-pane fade"
+    id="home"
+    role="tabpanel"
+    aria-labelledby="home-tab"
+  >
+    <app-home></app-home>
+  </div>
+</div>

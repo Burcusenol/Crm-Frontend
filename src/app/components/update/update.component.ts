@@ -18,6 +18,7 @@ export class UpdateComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.createHeadingAddForm();
   }
   createHeadingAddForm(){
     this.updateAddForm=this.formBuilder.group({

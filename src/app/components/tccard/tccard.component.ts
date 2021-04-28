@@ -15,6 +15,7 @@ tccardAddForm:FormGroup;
     private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
+    this.createtccardAddForm();
   }
 
   createtccardAddForm(){
@@ -51,7 +52,13 @@ tccardAddForm:FormGroup;
       });
      
     } else {
-      this.toastrService.error('Formunuz eksik', 'Dikkat');
+      var form = document.getElementsByClassName('needs-validation')[0] as HTMLFormElement;
+      if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+      this.toastrService.error('Bu alanlar boş geçilemez!', 'Dikkat');
     }
 
   }

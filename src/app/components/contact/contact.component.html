@@ -1,106 +1,109 @@
 <div class="content">
-    <div class="col-md-12">
-      <div class="card">
-        <form [formGroup]="contactAddForm">
-          <div class="card-body">
-            <div class="mb-2 row">
-              <div class="col-md-2">
-                <label for="mobilePhone" class="col-form-label"
-                  >Cep Telefonu</label
-                >
-              </div>
-              <div class="col-sm-4">
-                <input
-                  type="text"
-                  id="mobilePhone"
-                  class="form-control"
-                  formControlName="mobilePhone"
-                  placeholder="+90(___)___ __ __"
-                />
-              </div>
-              
+  <div class="col-md-12">
+    <div class="card">
+      <form [formGroup]="contactAddForm" class="needs-validation">
+        <div class="card-body">
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="mobilePhone" class="col-form-label"
+                >Cep Telefonu</label
+              >
             </div>
-            <div class="mb-2 row">
-              <div class="col-md-2">
-                <label for="homePhone" class="col-form-label">Ev Telefonu</label>
-              </div>
-              <div class="col-sm-4">
-                <input
+            <div class="col-sm-4">
+              <input
+                type="text"
+                id="mobilePhone"
+                class="form-control"
+                formControlName="mobilePhone"
+                placeholder="+90(___)___ __ __"
+                required
+              />
+            </div>
+          </div>
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="homePhone" class="col-form-label">Ev Telefonu</label>
+            </div>
+            <div class="col-sm-4">
+              <input
                 type="text"
                 id="homePhone"
                 class="form-control"
                 formControlName="homePhone"
                 placeholder="+90(___)___ __ __"
+                required
               />
-
-              </div>
-              
             </div>
-            <div class="mb-2 row">
-              <div class="  col-md-2">
-                <label for="officePhone" class="col-form-label">İş Telefonu/Dahili</label>
-              </div>
-              <div class="col-sm-4">
-                <input
-                  type="text"
-                  id="officePhone"
-                  class="form-control"
-                  formControlName="officePhone"
-                  placeholder="+90(___)___ __ __"
-                />
-              </div>
-              <div class="col-auto">
-                <label for="to">/</label>
-             </div>
-             <div class="col-sm-1">
-                <input
-                       type="text"
-                       id="officePhone"
-                       class="form-control"
-                       formControlName="officePhone"
-                       placeholder=""
-                       />
-             </div>
-
+          </div>
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="officePhone" class="col-form-label"
+                >İş Telefonu/Dahili</label
+              >
             </div>
+            <div class="col-sm-4">
+              <input
+                type="text"
+                id="officePhone"
+                class="form-control"
+                formControlName="officePhone"
+                placeholder="+90(___)___ __ __"
+                required
+              />
+            </div>
+            <div class="col-auto">
+              <label for="to">/</label>
+            </div>
+            <div class="col-sm-1">
+              <input
+                type="text"
+                id="officePhone"
+                class="form-control"
+                formControlName="officePhone"
+                placeholder=""
+                required
+              />
+            </div>
+          </div>
 
-            <div class="mb-2 row">
-              <div class="col-md-2">
-                <label for="email" class="col-form-label">E-Posta Adresi</label>
-              </div>
-              <div class="col-sm-4">
-                <input
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="email" class="col-form-label">E-Posta Adresi</label>
+            </div>
+            <div class="col-sm-4">
+              <input
                 type="text"
                 id="email"
                 class="form-control"
                 formControlName="email"
                 placeholder="ekrem.deniz@gmailcom"
               />
-              </div>
-              
             </div>
-            <div class="mb-2 row">
-              <div class="col-md-2">
-                <label for="webAddress" class="col-form-label">Web Adresi</label>
-              </div>
-              <div class="col-sm-4">
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="webAddress">Http://</span>
-                    <input type="text" class="form-control" formControlName= "webAddress"aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                  </div>
-              </div>
-             
+          </div>
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="webAddress" class="col-form-label">Web Adresi</label>
             </div>
-            
-           
+            <div class="col-sm-4">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="webAddress">Http://</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="webAddress"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default"
+                />
+              </div>
+            </div>
           </div>
-          <div class="card-body">
-            <button class="btn btn-outline-primary" (click)="add()">
-              Kaydet
-            </button>
-          </div>
-        </form>
-      </div>
+        </div>
+        <div class="card-body">
+          <button class="btn btn-outline-primary" (click)="add()">
+            Kaydet
+          </button>
+        </div>
+      </form>
     </div>
   </div>
-  
+</div>

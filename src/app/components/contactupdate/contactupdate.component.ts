@@ -22,8 +22,9 @@ export class ContactupdateComponent implements OnInit {
   getContactUpdate() {
     this.contactupdateService.getContactUpdate().subscribe(response=>{
       this.contactUpdates=response.data
-      
+     
     })
   }
+
 
 }

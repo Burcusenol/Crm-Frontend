@@ -1,72 +1,111 @@
-
-  <div class="content">
-    <div class="col-md-12">
-      <div class="card">
-          <form [formGroup]="identityAddForm">
-            <div class="card-body">
-            <div class="mb-2 row">
-              <div class="col-md-2">
-                <label for="birthPlace" class="col-form-label">Doğum Yeri</label>
-              </div>
-              <div class="col-sm-4">
-                <input type="text" id="birthPlace" class="form-control"formControlName="birthPlace" placeholder="ANTALYA">
-              </div>
-              <div class="col-md-2">
-                <label for="place" class="col-form-label">Yerleşim ülkesi</label>
-              </div>
-              <div class="col-sm-4">
-                <select class="form-select" id="place" formControlName="place" aria-label="Türkiye">
-                  <option selected value="">Türkiye</option>
-                  <option value="1">One</option>
-                </select>
-              </div>
+<div class="content">
+  <div class="col-md-12">
+    <div class="card">
+      <form [formGroup]="identityAddForm" class="needs-validation">
+        <div class="card-body">
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="birthPlace" class="col-form-label">Doğum Yeri</label>
             </div>
-            <div class="mb-2 row">
-              <div class="col-md-2">
-                <label for="fatherName" class="col-form-label">Baba Adı</label>
-              </div>
-              <div class="col-sm-4">
-                <input type="text" id="fatherName" class="form-control"formControlName="fatherName" placeholder="Kerem">
-              </div>
-              <div class="col-md-2">
-                <label for="nationality" class="col-form-label">Uyruk</label>
-              </div>
-              <div class="col-sm-4">
-                <select class="form-select" id="nationality" formControlName="nationality" aria-label="Türkiye">
-                  <option selected value="">Türkiye</option>
-                </select>
-              </div>
-             </div>
-             <div class="mb-2 row">
-              <div class="col-md-2">
-                <label for="motherName" class="col-form-label ">Ana Adı</label>
-              </div>
-              <div class="col-sm-4"> 
-                <input type="text" id="motherName" class="form-control"formControlName="motherName" placeholder="Fadime">
-              </div>
-              <div class="col-md-2">
-                <label for="nationalityStatus" class="col-form-label  ">Vatandaşlık Durumu</label>
-              </div>
-              <div class="col-sm-4">
-                <select class="form-select" id="nationalityStatus" formControlName="nationalityStatus" aria-label="">
-                  <option selected >Türkiye</option>
-                  <option value="1">One</option>
-
-                </select>
-              </div>
-             </div>
+            <div class="col-sm-4">
+              <input
+                type="text"
+                class="form-control"
+                id="birthPlace"
+                aria-describedby="birthPlace"
+                placeholder="Antalya"
+                required
+              />
             </div>
-            <div class="card-body  ">
-              <button class="btn btn-outline-primary " (click)="add()">Kaydet</button>
+            <div class="col-md-2">
+              <label for="place" class="col-form-label">Yerleşim ülkesi</label>
             </div>
-          </form>
-      </div>
-      
+            <div class="col-sm-4">
+              <select
+                class="form-select"
+                id="place"
+                formControlName="place"
+                aria-label="Türkiye"
+                required
+              >
+                <option selected value="">Türkiye</option>
+                <option value="1">One</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="fatherName" class="col-form-label">Baba Adı</label>
+            </div>
+            <div class="col-sm-4">
+              <input
+                type="text"
+                id="fatherName"
+                class="form-control"
+                formControlName="fatherName"
+                placeholder="Kerem"
+                required
+              />
+            </div>
+            <div class="col-md-2">
+              <label for="nationality" class="col-form-label">Uyruk</label>
+            </div>
+            <div class="col-sm-4">
+              <select
+                class="form-select"
+                id="nationality"
+                formControlName="nationality"
+                aria-label="Türkiye"
+                required
+              >
+                <option selected>Türkiye</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="motherName" class="col-form-label">Ana Adı</label>
+            </div>
+            <div class="col-sm-4">
+              <input
+                type="text"
+                id="motherName"
+                class="form-control"
+                formControlName="motherName"
+                placeholder="Fadime"
+                required
+              />
+            </div>
+            <div class="col-md-2">
+              <label for="nationalityStatus" class="col-form-label"
+                >Vatandaşlık Durumu</label
+              >
+            </div>
+            <div class="col-sm-4">
+              <select
+                class="form-select"
+                id="nationalityStatus"
+                formControlName="nationalityStatus"
+                aria-label=""
+                required
+              >
+                <option selected value="">Türkiye</option>
+                <option value="1">One</option>
+              </select>
+            </div>
+          </div>
         </div>
-  
-
-      </div>
-
-
-
-  
+        <div class="card-body">
+          <button
+            id="button"
+            type="button"
+            class="btn btn-outline-primary"
+            (click)="add()"
+          >
+            Kaydet
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -19,7 +19,7 @@ export class ContactupdateService {
   }
 
   getContactUpdate():Observable<ListResponseModel<ContactUpdate>> {
-    let newPath=this.apiUrl+"contactupdates/getall" 
+    let newPath=this.apiUrl+"contactupdates/update" 
     return this.httpClient.get<ListResponseModel<ContactUpdate>>(newPath);
   }
 }

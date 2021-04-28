@@ -53,7 +53,7 @@ headingAddForm:FormGroup;
       });
      
     } else {
-      this.toastrService.error('Formunuz eksik', 'Dikkat');
+      this.toastrService.error('Lütfen muhatabın Ad, Soyad ve en az bir iletişim bilgisini giriniz.', 'Dikkat');
     }
 
   }

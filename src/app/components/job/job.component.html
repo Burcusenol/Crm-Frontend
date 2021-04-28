@@ -1,77 +1,75 @@
 <div class="content">
-    <div class="col-md-12">
-      <div class="card">
-        <form [formGroup]="jobAddForm">
-          <div class="card-body">
-            <div class="mb-2 row">
-              <div class="col-md-2">
-                <label for="workingWay" class="col-form-label"
-                  >Çalışma Şekli</label
-                >
-              </div>
-              <div class="col-sm-4">
-                <select
-                  class="form-select"
-                  id="workingWay"
-                  formControlName="workingWay"
-                  aria-label=""
-                >
-                 
-                </select>
-              </div>
-              <div class="col-md-2">
-                <label for="title" class="col-form-label">Ünvan</label>
-              </div>
-              <div class="col-sm-4">
-                <select
-                  class="form-select"
-                  id="title"
-                  formControlName="title"
-                  aria-label=""
-                >
+  <div class="col-md-12">
+    <div class="card">
+      <form [formGroup]="jobAddForm" class="needs-validation">
+        <div class="card-body">
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="workingWay" class="col-form-label"
+                >Çalışma Şekli</label
+              >
+            </div>
+            <div class="col-sm-4">
+              <select
+                class="form-select"
+                id="workingWay"
+                formControlName="workingWay"
+                aria-label=""
+                required
+              ></select>
+            </div>
+            <div class="col-md-2">
+              <label for="title" class="col-form-label">Ünvan</label>
+            </div>
+            <div class="col-sm-4">
+              <select
+                class="form-select"
+                id="title"
+                formControlName="title"
+                aria-label=""
+              >
                 <option selected></option>
-                </select>
-              </div>
+              </select>
             </div>
-            <div class="mb-2 row">
-              <div class="col-md-2">
-                <label for="profession" class="col-form-label">Meslek</label>
-              </div>
-              <div class="col-sm-4">
-                <select
-                  class="form-select"
-                  id="profession"
-                  formControlName="profession"
-                  aria-label=""
-                >
-                  <option selected></option>
-                </select>
-              </div>
-              <div class="col-md-2">
-                <label for="incomeGroup" class="col-form-label">Gelir Grubu</label>
-              </div>
-              <div class="col-sm-4">
-                <select
-                  class="form-select"
-                  id="incomeGroup"
-                  formControlName="incomeGroup"
-                  aria-label=""
-                >
-                  <option selected></option>
-                </select>
-              </div>
+          </div>
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="profession" class="col-form-label">Meslek</label>
             </div>
-            
-          
-           
+            <div class="col-sm-4">
+              <select
+                class="form-select"
+                id="profession"
+                formControlName="profession"
+                aria-label=""
+                required
+              >
+                <option selected></option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="incomeGroup" class="col-form-label"
+                >Gelir Grubu</label
+              >
+            </div>
+            <div class="col-sm-4">
+              <select
+                class="form-select"
+                id="incomeGroup"
+                formControlName="incomeGroup"
+                aria-label=""
+              >
+                <option selected></option>
+              </select>
+            </div>
           </div>
-          <div class="card-body">
-            <button class="btn btn-outline-primary" (click)="add()">
-              Kaydet
-            </button>
-          </div>
-        </form>
-      </div>
+        </div>
+        <div class="card-body">
+          <button class="btn btn-outline-primary" (click)="add()">
+            Kaydet
+          </button>
+        </div>
+      </form>
     </div>
   </div>
-  
+</div>

@@ -1,11 +1,7 @@
-
-
-
-
 <div class="content">
   <div class="col-md-12">
     <div class="card">
-      <form [formGroup]="educationAddForm">
+      <form [formGroup]="educationAddForm" class="needs-validation">
         <div class="card-body">
           <div class="mb-2 row">
             <div class="col-md-2">
@@ -19,6 +15,7 @@
                 id="educationStatus"
                 formControlName="educationStatus"
                 aria-label="Türkiye"
+                required
               >
                 <option selected value="">Fakülte (4 Yıl)</option>
                 <option value="1">Fakülte (2 Yıl)</option>
@@ -60,19 +57,18 @@
               >
             </div>
             <div class="col-sm-4">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" formControlName="language" id="language">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      İngilizce
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="language" formControlName="language">
-                    <label class="form-check-label" for="flexCheckChecked">
-                      Arapça
-                    </label>
-                  </div>
-                
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  formControlName="language"
+                  id="language"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  İngilizce
+                </label>
+              </div>
             </div>
           </div>
           <div class="mb-2 row">

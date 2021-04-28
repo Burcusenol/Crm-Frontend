@@ -1,0 +1,106 @@
+<div class="content">
+  <div class="col-md-12">
+    <div class="card">
+      <form [formGroup]="homeAddForm" class="needs-validation">
+        <div class="card-body">
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="homePersonCount" class="col-form-label"
+                >Evdeki Kişi Sayısı</label
+              >
+            </div>
+            <div class="col-sm-4">
+              <input
+                type="text"
+                id="homePersonCount"
+                class="form-control"
+                formControlName="homePersonCount"
+                placeholder=""
+              />
+            </div>
+            <div class="col-md-2">
+              <label for="personCount" class="col-form-label"
+                >Baktığı Kişi Sayısı</label
+              >
+            </div>
+            <div class="col-sm-4">
+              <input
+                type="text"
+                id="personCount"
+                class="form-control"
+                formControlName="personCount"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="kidCount" class="col-form-label">Çocuk Sayısı</label>
+            </div>
+            <div class="col-sm-4">
+              <input
+                type="text"
+                id="kidCount"
+                class="form-control"
+                formControlName="kidCount"
+                placeholder=""
+              />
+            </div>
+            <div class="col-md-2">
+              <label for="homeKidCount" class="col-form-label"
+                >Evdeki Çocuk Sayısı</label
+              >
+            </div>
+            <div class="col-sm-4">
+              <input
+                type="text"
+                id="homeKidCount"
+                class="form-control"
+                formControlName="homeKidCount"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="homeStatus" class="col-form-label"
+                >Oturduğu Evin Durumu</label
+              >
+            </div>
+            <div class="col-sm-4">
+              <select
+                class="form-select"
+                id="homeStatus"
+                formControlName="homeStatus"
+                aria-label=""
+                required
+              >
+                <option selected>Kira</option>
+                <option value="1">Kendi</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="year" class="col-form-label"
+                >Kaç senedir oturuyor?</label
+              >
+            </div>
+            <div class="col-sm-4">
+              <input
+                type="text"
+                id="year"
+                class="form-control"
+                formControlName="year"
+                placeholder=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <button class="btn btn-outline-primary" (click)="add()">
+            Kaydet
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

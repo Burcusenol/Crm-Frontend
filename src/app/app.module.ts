@@ -19,6 +19,10 @@ import { JobComponent } from './components/job/job.component';
 import { TccardComponent } from './components/tccard/tccard.component';
 import { ContactupdateComponent } from './components/contactupdate/contactupdate.component';
 import { EducationComponent } from './components/education/education.component';
+import { ReferenceComponent } from './components/reference/reference.component';
+import { RelationComponent } from './components/relation/relation.component';
+import { JobtypeComponent } from './components/jobtype/jobtype.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { EducationComponent } from './components/education/education.component';
     JobComponent,
     TccardComponent,
     ContactupdateComponent,
-    EducationComponent
+    EducationComponent,
+    ReferenceComponent,
+    RelationComponent,
+    JobtypeComponent,
+    HomeComponent
     
   ],
   imports: [

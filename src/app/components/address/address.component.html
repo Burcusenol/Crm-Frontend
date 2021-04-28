@@ -1,7 +1,7 @@
 <div class="content">
   <div class="col-md-12">
     <div class="card">
-      <form [formGroup]="addressAddForm">
+      <form [formGroup]="addressAddForm" class="needs-validation">
         <div class="card-body">
           <div class="mb-2 row">
             <div class="col-md-2">
@@ -16,6 +16,7 @@
                 class="form-control"
                 formControlName="recipientName"
                 placeholder="Ekrem H. Deniz"
+                required
               />
             </div>
             <div class="col-md-2">
@@ -43,6 +44,7 @@
                 id="addressType"
                 formControlName="addressType"
                 aria-label=""
+                required
               >
                 <option selected></option>
               </select>
@@ -57,6 +59,7 @@
                 class="form-control"
                 formControlName="street"
                 placeholder=""
+                required
               />
             </div>
           </div>
@@ -70,6 +73,7 @@
                 id="country"
                 formControlName="country"
                 aria-label=""
+                required
               >
                 <option selected></option>
               </select>
@@ -97,6 +101,7 @@
                 id="city"
                 formControlName="city"
                 aria-label=""
+                required
               >
                 <option selected></option>
               </select>
@@ -124,6 +129,7 @@
                 id="district"
                 formControlName="district"
                 aria-label=""
+                required
               >
                 <option selected></option>
               </select>
@@ -138,6 +144,7 @@
                 class="form-control"
                 formControlName="apartmentNo"
                 placeholder=""
+                required
               />
             </div>
           </div>
@@ -146,7 +153,7 @@
               <label for="postalCode" class="col-form-label">Posta Kodu</label>
             </div>
             <div class="col-sm-4">
-                <input
+              <input
                 type="number"
                 id="postalCode"
                 class="form-control"
@@ -154,7 +161,6 @@
                 placeholder=""
               />
             </div>
-            
           </div>
         </div>
         <div class="card-body">

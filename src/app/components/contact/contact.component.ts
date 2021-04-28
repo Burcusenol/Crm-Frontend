@@ -45,7 +45,14 @@ contactAddForm:FormGroup;
       });
      
     } else {
-      this.toastrService.error('Formunuz eksik', 'Dikkat');
+      var form = document.getElementsByClassName('needs-validation')[0] as HTMLFormElement;
+      if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+      this.toastrService.error('En az bir iletişim bilgsi zorunludur!', 'Dikkat');
+      this.toastrService.error('Girmek istediğiniz Telefon numarası ile uyuşan muhatap kaydı bulunmaktadır, lütfen bilgileri kontrol ediniz.', 'Dikkat');
     }
 
   }

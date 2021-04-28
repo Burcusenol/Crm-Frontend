@@ -1,38 +1,39 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
-import { IdentityService } from 'src/app/services/identity.service';
+import { HomeService } from 'src/app/services/home.service';
 
 @Component({
-  selector: 'app-identity',
-  templateUrl: './identity.component.html',
-  styleUrls: ['./identity.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class IdentityComponent implements OnInit {
-  identityAddForm:FormGroup;
-  constructor(private formBuilder:FormBuilder,
-    private identityService:IdentityService,
-    private toastrService:ToastrService) { }
+export class HomeComponent implements OnInit {
 
+  homeAddForm:FormGroup;
+  constructor(private formBuilder:FormBuilder,
+    private homeService:HomeService,
+    private toastrService:ToastrService) { }
+  
   ngOnInit(): void {
-    this.createIdentityAddForm();
+    this.createhomeAddForm();
   }
 
-  createIdentityAddForm(){
-    this.identityAddForm=this.formBuilder.group({
-      birthPlace:["",Validators.required],
-      fatherName:["",Validators.required],
-      motherName:["",Validators.required],
-      place:["",Validators.required],
-      nationality:["",Validators.required],
-      nationalityStatus:["",Validators.required],
-    });
+  createhomeAddForm(){
+    this.homeAddForm=this.formBuilder.group({
+      homePersonCount:['',Validators.required],
+      kidCount:['',Validators.required],
+      personCount:['',Validators.required],
+      year:['',Validators.required],
+      homeKidCount:['',Validators.required],
+      homeStatus:['',Validators.required]
+    })
   }
 
   add() {
-    if (this.identityAddForm.valid) {
-      let identityModel = Object.assign({}, this.identityAddForm.value);
-      this.identityService.add(identityModel).subscribe(response=>{ 
+    if (this.homeAddForm.valid) {
+      let homeModel = Object.assign({}, this.homeAddForm.value);
+      this.homeService.add(homeModel).subscribe(response=>{ 
         this.toastrService.success(response.message,"Başarılı")
       },responseError=>{
         if(responseError.error.ValidationErrors.length>0){
@@ -51,11 +52,9 @@ export class IdentityComponent implements OnInit {
         event.stopPropagation();
       }
       form.classList.add('was-validated');
-      this.toastrService.error('Bu alanlar boş geçilemez!', 'Dikkat');
+      this.toastrService.error('Evin durumu zorunludur!', 'Dikkat');
+      this.toastrService.error('Formunuz eksik', 'Dikkat');
     }
 
   }
-
-  
 }
-
