@@ -1,0 +1,318 @@
+<nav
+  class="navbar navbar-expand-lg navbar-dark bg-light"
+  aria-label="Tenth navbar example"
+>
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarsExample08"
+      aria-controls="navbarsExample08"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample08">
+      <ul class="nav nav-tabs">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="tc-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#tc"
+            type="button"
+            role="tab"
+            aria-controls="tc"
+            aria-selected="true"
+          >
+            Tc Kimlik Kartı
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="ehliyet-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#ehliyet"
+            type="button"
+            role="tab"
+            aria-controls="ehliyet"
+            aria-selected="false"
+          >
+            Ehliyet
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="pasaport-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#pasaport"
+            type="button"
+            role="tab"
+            aria-controls="pasaport"
+            aria-selected="false"
+          >
+            Pasaport
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="tc" role="tabpanel" aria-labelledby="tc-tab">
+        <div class="content">
+            <div class="col-md-12">
+              <div class="card">
+                <form [formGroup]="tccardAddForm">
+                  <div class="card-body">
+                    <div class="mb-2 row">
+                      <div class="col-md-2">
+                        <label for="identityNo" class="col-form-label"
+                          >Tc Kimlik No</label
+                        >
+                      </div>
+                      <div class="col-sm-4">
+                        <input
+                          type="text"
+                          id="identityNo"
+                          class="form-control"
+                          formControlName="identityNo"
+                          placeholder=""
+                        />
+                      </div>
+                      <div class="col-md-2">
+                        <label for="fatherName" class="col-form-label">Baba Adı</label>
+                      </div>
+                      <div class="col-sm-4">
+                        <input
+                        type="text"
+                        id="fatherName"
+                        class="form-control"
+                        formControlName="fatherName"
+                        placeholder="Kerem"
+                      />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <div class="col-md-2">
+                        <label for="serialNo" class="col-form-label">Seri No</label>
+                      </div>
+                      <div class="col-sm-4">
+                        <input
+                        type="text"
+                        id="serialNo"
+                        class="form-control"
+                        formControlName="serialNo"
+                        placeholder=""
+                      />
+                      </div>
+                      <div class="col-md-2">
+                        <label for="motherName" class="col-form-label">Ana Adı</label>
+                      </div>
+                      <div class="col-sm-4">
+                        <input
+                          type="text"
+                          id="motherName"
+                          class="form-control"
+                          formControlName="motherName"
+                          placeholder="Fadime"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <div class="col-md-2">
+                        <label for="name" class="col-form-label">Adı</label>
+                      </div>
+                      <div class="col-sm-4">
+                        <input
+                          type="text"
+                          id="name"
+                          class="form-control"
+                          formControlName="name"
+                          placeholder="AYLA"
+                        />
+                      </div>
+                      <div class="col-md-2">
+                        <label for="birthPlace" class="col-form-label">Doğum Yeri</label>
+                      </div>
+                      <div class="col-sm-4">
+                        <input
+                          type="text"
+                          id="birthPlace"
+                          class="form-control"
+                          formControlName="birthPlace"
+                          placeholder="ANTALYA"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <div class="col-md-2">
+                        <label for="secondName" class="col-form-label">İkinci Adı</label>
+                      </div>
+                      <div class="col-sm-4">
+                        <input
+                          type="text"
+                          id="secondName"
+                          class="form-control"
+                          formControlName="secondName"
+                          placeholder="EGE"
+                        />
+                      </div>
+                      <div class="col-md-2">
+                        <label for="birthDate" class="col-form-label">Doğum Tarihi</label>
+                      </div>
+                      <div class="col-sm-4">
+                        <input
+                        type="date"
+                        id="birthDate"
+                        class="form-control"
+                        formControlName="birthDate"
+                        placeholder="20/07/1981"
+                      />
+                      </div>
+                    </div>
+                    <div class="mb-2 row">
+                      <div class="col-md-2">
+                        <label for="surName" class="col-form-label">Soyadı</label>
+                      </div>
+                      <div class="col-sm-4">
+                        <input
+                        type="text"
+                        id="surName"
+                        class="form-control"
+                        formControlName="surName"
+                        placeholder="DENİZ"
+                      />
+                      </div>
+                      
+                    </div>
+                    <div class="mb-2 row">
+                      <div class="col-md-2">
+                        <label for="gender" class="col-form-label">Cinsiyet</label>
+                      </div>
+                      <div class="col-sm-4">
+                        <select
+                        class="form-select"
+                        id="gender"
+                        formControlName="gender"
+                        aria-label=""
+                       >
+                       <option value="1">Erkek</option>
+                      <option value="2">Kadın</option>
+                      </select>
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+                  <div class="card-body">
+                    <button class="btn btn-outline-primary" (click)="add()">
+                      Kaydet
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="tab-pane fade" id="ehliyet" role="tabpanel" aria-labelledby="ehliyet-tab">BB</div>
+    <div class="tab-pane fade" id="pasaport" role="tabpanel" aria-labelledby="pasaport-tab">CC</div>
+  </div>
+
+

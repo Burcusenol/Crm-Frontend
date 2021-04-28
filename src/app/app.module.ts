@@ -16,6 +16,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddressComponent } from './components/address/address.component';
 import {ContactComponent} from './components/contact/contact.component';
 import { JobComponent } from './components/job/job.component';
+import { TccardComponent } from './components/tccard/tccard.component';
+import { ContactupdateComponent } from './components/contactupdate/contactupdate.component';
+import { EducationComponent } from './components/education/education.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { JobComponent } from './components/job/job.component';
     IdentityComponent,
     AddressComponent,
     ContactComponent,
-    JobComponent
+    JobComponent,
+    TccardComponent,
+    ContactupdateComponent,
+    EducationComponent
     
   ],
   imports: [

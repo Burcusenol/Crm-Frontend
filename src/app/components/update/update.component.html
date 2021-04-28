@@ -144,57 +144,33 @@
                         <label for="riskClass" class="col-form-label">Risk Sınıfı</label>
                       </div>
                       <div class="col-sm-4">
-                        <input
-                          type="text"
+                        <select
+                          class="form-select"
                           id="riskClass"
-                          class="form-control"
                           formControlName="riskClass"
-                          placeholder=""
-                        />
+                          aria-label=""
+                        >
+                          <option selected>Düşük</option>
+                        </select>
                       </div>
                     </div>
                     <div class="mb-2 row">
                       <div class="col-md-2">
-                        <label for="district" class="col-form-label">Muhatap Durumu</label>
+                        <label for="personStatus" class="col-form-label">Muhatap Durumu</label>
                       </div>
                       <div class="col-sm-4">
                         <select
                           class="form-select"
-                          id="district"
-                          formControlName="district"
+                          id="personStatus"
+                          formControlName="personStatus"
                           aria-label=""
                         >
                           <option selected></option>
                         </select>
                       </div>
-                      <div class="col-md-2">
-                        <label for="apartmentNo" class="col-form-label">Bina No</label>
-                      </div>
-                      <div class="col-sm-4">
-                        <input
-                          type="text"
-                          id="apartmentNo"
-                          class="form-control"
-                          formControlName="apartmentNo"
-                          placeholder=""
-                        />
-                      </div>
-                    </div>
-                    <div class="mb-2 row">
-                      <div class="col-md-2">
-                        <label for="postalCode" class="col-form-label">Posta Kodu</label>
-                      </div>
-                      <div class="col-sm-4">
-                          <input
-                          type="number"
-                          id="postalCode"
-                          class="form-control"
-                          formControlName="postalCode"
-                          placeholder=""
-                        />
-                      </div>
                       
                     </div>
+                    
                   </div>
                   <div class="card-body">
                     <button class="btn btn-outline-primary" (click)="add()">
@@ -205,6 +181,8 @@
               </div>
             </div>
           </div>
+
+          
 
 
     </div>
@@ -309,9 +287,9 @@
 
 
 
-  <div class="tab-pane fade" id="kimlik" role="tabpanel" aria-labelledby="kimlik-tab">BBB.</div>
-  <div class="tab-pane fade" id="iletisim" role="tabpanel" aria-labelledby="iletisim-tab">CCC..</div>
-  <div class="tab-pane fade " id="egitim" role="tabpanel" aria-labelledby="egitim-tab">DDD</div>
+  <div class="tab-pane fade" id="kimlik" role="tabpanel" aria-labelledby="kimlik-tab"><app-tccard></app-tccard></div>
+  <div class="tab-pane fade" id="iletisim" role="tabpanel" aria-labelledby="iletisim-tab"><app-contactupdate></app-contactupdate></div>
+  <div class="tab-pane fade " id="egitim" role="tabpanel" aria-labelledby="egitim-tab"><app-education></app-education></div>
   <div class="tab-pane fade" id="referans" role="tabpanel" aria-labelledby="referans-tab">EEE.</div>
   <div class="tab-pane fade" id="iliski" role="tabpanel" aria-labelledby="iliski-tab">FFF</div>
   <div class="tab-pane fade " id="meslek" role="tabpanel" aria-labelledby="meslek-tab">GGG</div>

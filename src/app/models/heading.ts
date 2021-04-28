@@ -7,7 +7,7 @@ export interface Heading{
     name:string;
     secondName:string;
     surName:string;
-    birthDate:string;
+    birthDate:Date;
     gender:string;
     firstDate:Date;
     kvk:string;

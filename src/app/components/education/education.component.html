@@ -1,0 +1,105 @@
+
+
+
+
+<div class="content">
+  <div class="col-md-12">
+    <div class="card">
+      <form [formGroup]="educationAddForm">
+        <div class="card-body">
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="educationStatus" class="col-form-label"
+                >Öğrenim Durumu</label
+              >
+            </div>
+            <div class="col-sm-4">
+              <select
+                class="form-select"
+                id="educationStatus"
+                formControlName="educationStatus"
+                aria-label="Türkiye"
+              >
+                <option selected value="">Fakülte (4 Yıl)</option>
+                <option value="1">Fakülte (2 Yıl)</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="lastSchool" class="col-form-label"
+                >Son Bitirilen Okul</label
+              >
+            </div>
+            <div class="col-sm-4">
+              <input
+                type="text"
+                id="lastSchool"
+                class="form-control"
+                formControlName="lastSchool"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="graduationDate" class="col-form-label"
+                >Mezuniyet Tarihi</label
+              >
+            </div>
+            <div class="col-sm-4">
+              <input
+                type="date"
+                id="graduationDate"
+                class="form-control"
+                formControlName="graduationDate"
+                placeholder="10/03/2010"
+              />
+            </div>
+            <div class="col-md-2">
+              <label for="language" class="col-form-label"
+                >Yabancı Diller</label
+              >
+            </div>
+            <div class="col-sm-4">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" formControlName="language" id="language">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      İngilizce
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="language" formControlName="language">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Arapça
+                    </label>
+                  </div>
+                
+            </div>
+          </div>
+          <div class="mb-2 row">
+            <div class="col-md-2">
+              <label for="militaryStatus" class="col-form-label"
+                >Askerlik Durumu</label
+              >
+            </div>
+            <div class="col-sm-4">
+              <select
+                class="form-select"
+                id="militaryStatus"
+                formControlName="militaryStatus"
+                aria-label="Muaf"
+              >
+                <option selected value="">Muaf</option>
+                <option>Yapıldı</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <button class="btn btn-outline-primary" (click)="add()">
+            Kaydet
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
