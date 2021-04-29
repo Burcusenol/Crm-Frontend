@@ -60,7 +60,7 @@
     <div class="content">
       <div class="col-md-12">
         <div class="card">
-          <form [formGroup]="jobtypeAddForm">
+          <form [formGroup]="jobtypeAddForm" class="needs-validation">
             <div class="card-body">
               <div class="mb-2 row">
                 <div class="col-md-2">
@@ -74,6 +74,7 @@
                     id="jobType"
                     formControlName="jobType"
                     aria-label=""
+                    required
                   >
                     <option selected></option>
                     <option value="1"></option>
@@ -137,6 +138,7 @@
                     formControlName="title"
                     aria-label=""
                     aria-placeholder=""
+                    required
                   >
                     <option selected></option>
                   </select>

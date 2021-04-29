@@ -54,6 +54,12 @@ headingAddForm:FormGroup;
       });
      
     } else {
+      var form = document.getElementsByClassName('needs-validation')[0] as HTMLFormElement;
+      if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
       this.toastrService.error('Lütfen muhatabın Ad, Soyad ve en az bir iletişim bilgisini giriniz.', 'Dikkat');
     }
 

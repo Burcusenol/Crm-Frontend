@@ -102,7 +102,7 @@
     <div class="content">
       <div class="col-md-12">
         <div class="card">
-          <form [formGroup]="headingAddForm">
+          <form [formGroup]="headingAddForm " class="needs-validation">
             <div class="card-body">
               <div class="mb-2 row">
                 <div class="col-md-2">
@@ -146,6 +146,7 @@
                     class="form-control"
                     formControlName="identification"
                     placeholder="123456787901"
+                    required
                   />
                 </div>
                 <div class="col-md-2">
@@ -174,6 +175,8 @@
                     class="form-control"
                     formControlName="name"
                     placeholder="EKREM"
+                    required
+
                   />
                 </div>
                 <div class="col-md-2">
@@ -232,6 +235,7 @@
                     class="form-control"
                     formControlName="surName"
                     placeholder="DENİZ"
+                    required
                   />
                 </div>
                 <div class="col-md-2">

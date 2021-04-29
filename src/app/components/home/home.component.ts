@@ -32,12 +32,31 @@ export class HomeComponent implements OnInit {
 
   
 
-  add()
-  {
-    let homeModel = Object.assign({}, this.homeAddForm.value);
-    this.homeService.add(homeModel).subscribe(response=>{ 
-      this.toastrService.success(response.message,"Başarılı")
+  add() {
+    if (this.homeAddForm.valid) {
+      let homeModel = Object.assign({}, this.homeAddForm.value);
+      this.homeService.add(homeModel).subscribe(response=>{ 
+        this.toastrService.success(response.message,"Başarılı")
+      },responseError=>{
+        if(responseError.error.ValidationErrors.length>0){
+          for (let i = 0; i < responseError.error.ValidationErrors.length; i++) {
+             this.toastrService.error(responseError.error.ValidationErrors[i].ErrorMessage,"Doğrulama hatası");
+          }
+         
+        }
+
+      });
+     
+    } else {
+      var form = document.getElementsByClassName('needs-validation')[0] as HTMLFormElement;
+      if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+      this.toastrService.error('Bu alanlar boş geçilemez!', 'Dikkat');
     }
-    )};
+
+  }
 }
 
