@@ -13,7 +13,7 @@ export class EducationService {
 
   constructor(private httpClient:HttpClient) { }
 
-  add(education:Education):Observable<ResponseModel>{
+  add(education:Education){
     return this.httpClient.post<ResponseModel>(this.apiUrl+"educations/add",education)
   }
 }

@@ -12,7 +12,7 @@ export class ContactService {
 
   constructor(private httpClient:HttpClient) { }
 
-  add(contact:Contact):Observable<ResponseModel>{
+  add(contact:Contact){
     return this.httpClient.post<ResponseModel>(this.apiUrl+"contacts/add",contact)
   }
 }

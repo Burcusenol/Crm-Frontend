@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { Reference } from '@angular/compiler/src/render3/r3_ast';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ListResponseModel } from '../models/listResponseModel';
+import { Reference } from '../models/reference';
 import { ResponseModel } from '../models/responseModel';
 
 @Injectable({
@@ -14,7 +14,7 @@ export class ReferenceService {
   
   constructor(private httpClient:HttpClient) { }
 
-  update(reference:Reference):Observable<ResponseModel>{
+  update(reference:Reference){
     return this.httpClient.post<ResponseModel>(this.apiUrl+"references/update",reference)
   }
 

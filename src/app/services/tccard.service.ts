@@ -12,7 +12,7 @@ export class TccardService {
   
   constructor(private httpClient:HttpClient) { }
 
-  add(tccard:TcCard):Observable<ResponseModel>{
+  add(tccard:TcCard){
     return this.httpClient.post<ResponseModel>(this.apiUrl+"tccards/add",tccard)
   }
 }

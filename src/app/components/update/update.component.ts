@@ -18,12 +18,12 @@ export class UpdateComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.createHeadingAddForm();
+    this.createPersonAddForm();
   }
-  createHeadingAddForm(){
+  createPersonAddForm(){
     this.updateAddForm=this.formBuilder.group({
       id:["",Validators.required],
-      persontype:["",Validators.required],
+      personType:["",Validators.required],
       kvkStatus:["",Validators.required],
       personName:["",Validators.required],
       personStatus:["",Validators.required],

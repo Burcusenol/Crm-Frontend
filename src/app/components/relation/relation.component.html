@@ -1,20 +1,24 @@
-<table  class="table table-hover">
+
+
+<table class="table table-hover">
     <thead>
         <tr>
             <th>Tür</th>
             <th>No</th>
-            <th>Ad</th>
+            <th> Ad</th>
             <th>Telefon</th>
+            
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Velisi</td>
-            <td>35461</td>
-            <td>Ahmet Deniz</td>
-            <td>0505 456 45 67</td>
+        <tr *ngFor="let relation of relations">
+            
+            <td>{{relation.type }}</td>
+            <td>{{relation.no }}</td>
+            <td>{{relation.name }}</td>
+            <td>{{relation.tel }}</td>
+            
+          
         </tr>
-    </tbody>
-
-</table>
+    </tbody>  
 

@@ -14,12 +14,12 @@ export class ContactupdateService {
   
   constructor(private httpClient:HttpClient) { }
 
-  update(contactUpdate:ContactService):Observable<ResponseModel>{
-    return this.httpClient.post<ResponseModel>(this.apiUrl+"contactupdates/update",contactUpdate)
+  update(contactUpdate:ContactService){
+    return this.httpClient.post<ResponseModel>(this.apiUrl+"addresses/add",contactUpdate)
   }
 
   getContactUpdate():Observable<ListResponseModel<ContactUpdate>> {
-    let newPath=this.apiUrl+"contactupdates/update" 
+    let newPath=this.apiUrl+"contactupdate/getall" 
     return this.httpClient.get<ListResponseModel<ContactUpdate>>(newPath);
   }
 }

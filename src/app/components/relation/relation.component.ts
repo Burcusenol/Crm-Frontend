@@ -9,7 +9,7 @@ import { RelationService } from 'src/app/services/relation.service';
 })
 export class RelationComponent implements OnInit {
 
-  relation:Relation[]=[];
+  relations:Relation[]=[];
   filterText="";
   constructor(private relationService:RelationService,
    ) { }
@@ -20,7 +20,7 @@ export class RelationComponent implements OnInit {
 
   getRelations() {
     this.relationService.getRelations().subscribe(response=>{
-      this.relation=response.data
+      this.relations=response.data
       
     })
   }

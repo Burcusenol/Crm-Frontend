@@ -11,7 +11,7 @@ export class HomeService {
   apiUrl="https://localhost:44390/api/";
   constructor(private httpClient:HttpClient) { }
 
-  add(home:Home):Observable<ResponseModel>{
+  add(home:Home){
     return this.httpClient.post<ResponseModel>(this.apiUrl+"homes/add",home)
   }
 }

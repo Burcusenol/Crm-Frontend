@@ -14,7 +14,7 @@ export class RelationService {
   
   constructor(private httpClient:HttpClient) { }
 
-  update(relation:Relation):Observable<ResponseModel>{
+  update(relation:Relation){
     return this.httpClient.post<ResponseModel>(this.apiUrl+"relations/update",relation)
   }
 

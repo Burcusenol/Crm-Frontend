@@ -11,7 +11,7 @@ export class UpdateService {
   apiUrl="https://localhost:44390/api/"
 
   constructor(private httpClient:HttpClient) { }
-  add(personupdate:PersonUpdate):Observable<ResponseModel>{
+  add(personupdate:PersonUpdate){
     return this.httpClient.post<ResponseModel>(this.apiUrl+"personupdate/add",personupdate)
   }
 }

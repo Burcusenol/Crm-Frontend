@@ -12,7 +12,7 @@ export class IdentityService {
 
   constructor(private httpClient:HttpClient) { }
 
-  add(identity:Identity):Observable<ResponseModel>{
+  add(identity:Identity){
     return this.httpClient.post<ResponseModel>(this.apiUrl+"identities/add",identity)
   }
 }

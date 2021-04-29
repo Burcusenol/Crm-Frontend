@@ -2,7 +2,7 @@
 
 export interface JobType{
     id:number;
-    jobTypes:string;
+    jobType:string;
     companyName:string;
     title:string;
     ssk:string;

@@ -12,7 +12,7 @@ export class AddressService {
   apiUrl="https://localhost:44390/api/";
   constructor(private httpClient:HttpClient) { }
 
-  add(address:Address):Observable<ResponseModel>{
+  add(address:Address){
     return this.httpClient.post<ResponseModel>(this.apiUrl+"addresses/add",address)
   }
 }

@@ -12,7 +12,7 @@ export class JobtypeService {
   apiUrl="https://localhost:44390/api/";
   constructor(private httpClient:HttpClient) { }
 
-  add(jobType:JobType):Observable<ResponseModel>{
+  add(jobType:JobType){
     return this.httpClient.post<ResponseModel>(this.apiUrl+"jobtype/add",jobType)
   }
 }

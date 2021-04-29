@@ -29,6 +29,7 @@ headingAddForm:FormGroup;
       identification:["",Validators.required],
       name:["",Validators.required],
       surName:["",Validators.required],
+      secondName:["",Validators.required],
       birthDate:["",Validators.required],
       gender:["",Validators.required],
       firstDate:["",Validators.required],

@@ -1,5 +1,6 @@
-import { Reference } from '@angular/compiler/src/render3/r3_ast';
+
 import { Component, OnInit } from '@angular/core';
+import { Reference } from 'src/app/models/reference';
 import { ReferenceService } from 'src/app/services/reference.service';
 
 @Component({
@@ -9,8 +10,7 @@ import { ReferenceService } from 'src/app/services/reference.service';
 })
 export class ReferenceComponent implements OnInit {
 
-  reference:Reference[]=[];
-  filterText="";
+  references:Reference[]=[];
   constructor(private referenceService:ReferenceService,
    ) { }
 
@@ -20,7 +20,7 @@ export class ReferenceComponent implements OnInit {
 
   getReference() {
     this.referenceService.getReference().subscribe(response=>{
-      this.reference=response.data
+      this.references=response.data
       
     })
   }
